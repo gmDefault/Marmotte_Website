@@ -17,7 +17,10 @@ import { MarmotteAppRoutingModule } from './app-routing.module';
 import { MarmotteHomeModule } from './home/home.module';
 import { MarmotteAccountModule } from './account/account.module';
 import { MarmotteEntityModule } from './entities/entity.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import * as moment from 'moment';
+import 'hammerjs';
+import { MarmottePageSetsModule } from './pages/page-sets.module';
 // jhipster-needle-angular-add-module-import JHipster will add new module here
 import { JhiMainComponent, NavbarComponent, FooterComponent, PageRibbonComponent, ActiveMenuDirective, ErrorComponent } from './layouts';
 
@@ -30,7 +33,9 @@ import { JhiMainComponent, NavbarComponent, FooterComponent, PageRibbonComponent
         MarmotteCoreModule,
         MarmotteHomeModule,
         MarmotteAccountModule,
-        MarmotteEntityModule
+        MarmotteEntityModule,
+        BrowserAnimationsModule,
+        MarmottePageSetsModule
         // jhipster-needle-angular-add-module JHipster will add new module here
     ],
     declarations: [JhiMainComponent, NavbarComponent, ErrorComponent, PageRibbonComponent, ActiveMenuDirective, FooterComponent],
