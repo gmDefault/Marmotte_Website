@@ -41,6 +41,7 @@ export class MapComponent implements OnInit, OnDestroy {
             shadowUrl: require('../../../../../../node_modules/leaflet/dist/images/marker-shadow.png')
         })
     });
+
     fams1C2 = marker([45.035845, 6.387494], {
         icon: icon({
             iconSize: [25, 41],
@@ -131,20 +132,7 @@ export class MapComponent implements OnInit, OnDestroy {
 
     // Set the initial set
     options = {
-        layers: [
-            this.OSMaps,
-            this.fams1C4,
-            this.fams2C1,
-            this.fams1C1,
-            this.fams1C2,
-            this.fams1C3,
-            this.fams2C2,
-            this.fams2C3,
-            this.fams3C1,
-            this.fams3C2,
-            this.fams3C3,
-            this.fams3C4
-        ],
+        layers: [this.OSMaps, this.fams2C1, this.fams2C2, this.fams2C3, this.fams3C1, this.fams3C2, this.fams3C3, this.fams3C4],
         zoom: 13,
         center: latLng([45.047465, 6.395786])
     };
@@ -160,6 +148,14 @@ export class MapComponent implements OnInit, OnDestroy {
         this.principal.identity().then(account => {
             this.currentAccount = account;
         });
+        const text_blue: String =
+            '<p>Temps depuis la capture : <span style="color:red">12min42sec</span><br>Opérateur en intervention : <span style="color:blue"> Vincent </span>';
+        const text_orange: String =
+            'Niveau de batterie :<span style="color:red"> 3 % </span><br>Temps restant estimé: <span style="color:red">55 minutes </span><br>Opération nécessaire : <span style="color:red">changer la batterie</span>';
+        this.options.layers.push(this.fams1C1.bindPopup('<strong>Test</strong>'));
+        this.options.layers.push(this.fams1C2.bindPopup(text_blue));
+        this.options.layers.push(this.fams1C3.bindPopup('<strong>Test</strong>'));
+        this.options.layers.push(this.fams1C4.bindPopup(text_orange));
     }
 
     ngOnDestroy() {}
