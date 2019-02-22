@@ -23,6 +23,7 @@ import 'hammerjs';
 import { MarmottePageSetsModule } from './pages/page-sets.module';
 // jhipster-needle-angular-add-module-import JHipster will add new module here
 import { JhiMainComponent, NavbarComponent, FooterComponent, PageRibbonComponent, ActiveMenuDirective, ErrorComponent } from './layouts';
+import { MarmotteCagesModule } from './cages/cages.module';
 
 @NgModule({
     imports: [
@@ -35,7 +36,8 @@ import { JhiMainComponent, NavbarComponent, FooterComponent, PageRibbonComponent
         MarmotteAccountModule,
         MarmotteEntityModule,
         BrowserAnimationsModule,
-        MarmottePageSetsModule
+        MarmottePageSetsModule,
+        MarmotteCagesModule
         // jhipster-needle-angular-add-module JHipster will add new module here
     ],
     declarations: [JhiMainComponent, NavbarComponent, ErrorComponent, PageRibbonComponent, ActiveMenuDirective, FooterComponent],

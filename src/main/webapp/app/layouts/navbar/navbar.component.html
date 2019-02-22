@@ -1,5 +1,3 @@
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-
 <nav class="navbar navbar-dark navbar-expand-md jh-navbar">
     <div class="jh-logo-container float-left">
         <a class="jh-navbar-toggler d-lg-none float-right" href="javascript:void(0);" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation" (click)="toggleNavbar()">
@@ -23,14 +21,14 @@
             <li *ngSwitchCase="true" ngbDropdown class="nav-item dropdown pointer">
                         <a class="nav-link dropdown-toggle" routerLinkActive="active" ngbDropdownToggle href="javascript:void(0);" id="leaflet-menu">
                             <span>
-                              <i class="fas fa-map"></i>
+                              <fa-icon [icon]="'map'"></fa-icon>
                                 <span jhiTranslate="global.menu.map">Carte</span>
                             </span>
                         </a>
                         <ul class="dropdown-menu" ngbDropdownMenu>
                             <li>
                                 <a class="dropdown-item" routerLink="leaflet-map" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" (click)="collapseNavbar()">
-                                    <i class="fa fa-" aria-hidden="true"></i>&nbsp;
+                                  <fa-icon [icon]="'map'"></fa-icon>
                                     <span>Cartographie des cages</span>
                                 </a>
                             </li>

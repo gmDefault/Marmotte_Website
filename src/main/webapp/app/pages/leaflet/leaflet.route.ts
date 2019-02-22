@@ -10,7 +10,7 @@ export const LeafletRoute: Routes = [
         component: MapComponent,
         data: {
             authorities: ['ROLE_USER'],
-            pageTitle: 'Maps'
+            pageTitle: 'localversionApp.maps.title'
         }
     }
 ];
